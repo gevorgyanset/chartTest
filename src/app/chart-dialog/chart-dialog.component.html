@@ -1,0 +1,36 @@
+<h2 mat-dialog-title>Chart Form</h2>
+<mat-dialog-content>
+  <form [formGroup]="chartForm">
+    <div formArrayName="lines">
+      <div class="line-item" *ngFor="let line of lines.controls; let i = index" [formGroupName]="i">
+        <mat-form-field>
+          <mat-label for="type">Chart Type:</mat-label>
+          <mat-select id="type" formControlName="type">
+            <mat-option value="line">Line</mat-option>
+            <mat-option value="bar">Bar</mat-option>
+          </mat-select>
+        </mat-form-field>
+        <mat-form-field>
+          <mat-label for="name">Sensor name:</mat-label>
+          <mat-select id="name" formControlName="name">
+            <mat-option value="temperature">temperature</mat-option>
+            <mat-option value="humidity">humidity</mat-option>
+            <mat-option value="illumination">illumination</mat-option>
+          </mat-select>
+        </mat-form-field>
+        <mat-form-field>
+          <mat-label>line color:</mat-label>
+          <input matInput type="color" id="color" formControlName="color">
+        </mat-form-field>
+        <button mat-raised-button color="warn" *ngIf="lines.controls.length > 1" (click)="removeLine(i)">Remove</button>
+      </div>
+    </div>
+    <div class="add-button-container">
+      <button  mat-raised-button (click)="addLine()">Add Line</button>
+    </div>
+  </form>
+</mat-dialog-content>
+<mat-dialog-actions>
+  <button mat-raised-button (click)="onCancelClick()">Cancel</button>
+  <button mat-raised-button color="primary" (click)="onSaveClick()"  [disabled]="!chartForm.valid" >Save</button>
+</mat-dialog-actions>

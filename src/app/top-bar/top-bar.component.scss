@@ -1,0 +1,10 @@
+.top-bar-container {
+  display: flex;
+  align-items: stretch;
+  justify-content: space-evenly;
+  padding: 20px;
+  background-color: rgb(209 212 229 / 25%);
+  .create-button {
+    margin-top: 5px;
+  }
+}
