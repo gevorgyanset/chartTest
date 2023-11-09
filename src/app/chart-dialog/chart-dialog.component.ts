@@ -2,7 +2,7 @@ import { Component, Inject } from '@angular/core';
 import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
 import { ChartFormInterface } from 'src/models/chart.model';
 import { FormArray, FormBuilder } from '@angular/forms';
-import { DataService } from 'src/app/data.service';
+import { DataService } from 'src/services/data.service';
 
 @Component({
   selector: 'app-chart-dialog',

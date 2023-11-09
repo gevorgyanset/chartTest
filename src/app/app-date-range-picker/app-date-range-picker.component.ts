@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
-import { DataService } from 'src/app/data.service';
+import { DataService } from 'src/services/data.service';
 
 @Component({
   selector: 'app-date-range-picker',

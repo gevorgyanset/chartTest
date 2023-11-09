@@ -18,14 +18,21 @@ import { MatIconModule } from '@angular/material/icon';
 import { AppDateRangePickerComponent } from 'src/app/app-date-range-picker/app-date-range-picker.component';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
+import { LoginComponent } from 'src/app/login/login.component';
+import { DashboardComponent } from 'src/app/dashboard/dashboard.component';
+import { MatMenuModule } from '@angular/material/menu';
+import { MatTooltipModule } from '@angular/material/tooltip';
+import { MatCardModule } from '@angular/material/card';
 
 @NgModule({
   declarations: [
     AppComponent,
     TopBarComponent,
     ChartWidgetDirective,
+    LoginComponent,
     ChartDialogComponent,
     AppDateRangePickerComponent,
+    DashboardComponent,
   ],
   imports: [
     BrowserModule,
@@ -43,6 +50,9 @@ import { MatNativeDateModule } from '@angular/material/core';
     MatIconModule,
     MatDatepickerModule,
     MatNativeDateModule,
+    MatMenuModule,
+    MatCardModule,
+    MatTooltipModule
   ],
   providers: [],
   bootstrap: [AppComponent]

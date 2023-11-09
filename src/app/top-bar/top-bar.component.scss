@@ -1,9 +1,13 @@
 .top-bar-container {
   display: flex;
-  align-items: stretch;
+  align-items: baseline;
   justify-content: space-evenly;
   padding: 20px;
-  background-color: rgb(209 212 229 / 25%);
+  background-color: rgba(209, 212, 229, 0.25);
+  flex-wrap: wrap;
+  span.disabled {
+    cursor: not-allowed;
+  }
   .create-button {
     margin-top: 5px;
   }

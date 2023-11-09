@@ -1,4 +1,10 @@
 <div class="top-bar-container">
   <app-date-range-picker></app-date-range-picker>
-  <button class="create-button" mat-raised-button color="primary" (click)="openDialog()" [disabled]="chartCount > 2">Create Chart</button>
+  <span [class.disabled]="isViewerDisabled" [matTooltip]="isViewerDisabled ? viewerTooltip : ''">
+    <button class="create-button"
+            mat-raised-button color="primary"
+            (click)="openDialog()"
+            [disabled]="isViewerDisabled || chartCount > 2">Create Chart</button>
+  </span>
+  <button class="create-button" mat-raised-button color="primary" (click)="logout()">Logout</button>
 </div>

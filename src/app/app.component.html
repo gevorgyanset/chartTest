@@ -1,15 +1,1 @@
-<app-top-bar (createChartEvent)="addChart($event)" [chartCount]="charts.length"></app-top-bar>
-<div class="marge-button-container"  *ngIf="charts.length" >
-  <div class="warning-container">To use the 'Merge Charts' button, you need to select multiple charts.</div>
-  <button mat-raised-button (click)="mergeSelectedCharts()" [disabled]="!canMergeSelectedCharts">Merge Charts</button>
-</div>
-<div class="chart-container" *ngFor="let chart of charts; index as i">
-  <div class="action">
-    <input type="checkbox" [(ngModel)]="chart.selected" (change)="onCheckboxChange()">
-    <mat-icon  (click)="editLine(chart.charts, i)" aria-hidden="false" aria-label="Example home icon" fontIcon="edit"></mat-icon>
-    <mat-icon  (click)="remove(i)" aria-hidden="false" aria-label="Example home icon" fontIcon="delete"></mat-icon>
-
-  </div>
-  <div appChartWidget [chartItem]="chart.charts"></div>
-</div>
-
+<router-outlet></router-outlet>

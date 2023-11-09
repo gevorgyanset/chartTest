@@ -1,7 +1,7 @@
 import { Directive, ElementRef, Input, OnInit } from '@angular/core';
 import * as Highcharts from 'highcharts';
 import { ChartFormInterface } from 'src/models/chart.model';
-import { DataService } from 'src/app/data.service';
+import { DataService } from 'src/services/data.service';
 
 @Directive({
   selector: '[appChartWidget]',

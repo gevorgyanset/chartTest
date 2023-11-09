@@ -1,0 +1,31 @@
+.chart-container {
+  text-align: right;
+  background-color: #f7f7f7;
+  padding: 15px;
+  border: 2px solid rgb(206 209 227 / 25%);
+  .action {
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &:hover {
+      & * {
+        cursor: pointer;
+      }
+    }
+  }
+}
+.marge-button-container {
+  padding: 15px;
+  background-color: #f5f2e9;
+  .warning-container {
+    background-color: #fff3cd;
+    border: 1px solid #ffecb5;
+    padding: 10px;
+    display: inline;
+    border-radius: 5px;
+    display: initial;
+    margin: 30px;
+    color: #664d03;
+  }
+}
